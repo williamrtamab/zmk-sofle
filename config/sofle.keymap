@@ -44,7 +44,7 @@
         openprompt: openprompt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(R) &kp C &kp M &kp D &kp RET>;
+            bindings = <&kp LG(R) &kp C &kp M &kp D &kp RET &kp E &kp N &kp V &kp RET>;
             label = "OPENPROMPT";
             wait-ms = <50>;
         };
@@ -73,31 +73,31 @@
             display-name = "LAYER0";
         };
 
-        extend {
+        layer1 {
             bindings = <
-&kp LS(GRAVE)       &kp F1   &kp F2    &kp F3        &kp F4       &kp F5    &mmv MOVE_UP     &kp F6           &kp F7        &kp F8    &kp F9            &kp F10               &trans
-&kp GRAVE           &kp F11  &kp F12   &kp UP_ARROW  &openprompt  &trans    &mmv MOVE_DOWN   &kp PG_UP        &kp HOME      &kp UP    &kp END           &kp MINUS             &kp EQUAL
-&trans              &trans   &kp LEFT  &kp DOWN      &kp RIGHT    &trans    &mmv MOVE_LEFT   &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT         &kp LS(MINUS)         &kp LS(EQUAL)
-&trans              &trans   &trans    &trans        &trans       &trans    &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)       &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
-&kp LOCKING_SCROLL  &trans   &trans    &trans        &trans       &trans    &mkp LCLK        &trans           &trans        &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LS(GRAVE)       &kp F1   &kp F2    &kp F3        &kp F4       &kp F5       &mmv MOVE_UP     &kp F6           &kp F7        &kp F8    &kp F9            &kp F10               &trans
+&kp GRAVE           &kp F11  &kp F12   &kp UP_ARROW  &openprompt  &opencase    &mmv MOVE_DOWN   &kp PG_UP        &kp HOME      &kp UP    &kp END           &kp MINUS             &kp EQUAL
+&trans              &trans   &kp LEFT  &kp DOWN      &kp RIGHT    &trans       &mmv MOVE_LEFT   &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT         &kp LS(MINUS)         &kp LS(EQUAL)
+&to 2               &trans   &trans    &trans        &trans       &trans       &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)       &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&kp LOCKING_SCROLL  &trans   &trans    &trans        &trans       &trans       &mkp LCLK        &trans           &trans        &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
-        number {
+        layer2 {
             bindings = <
-&to 0   &to 1       &to 2   &to 3   &none   &none     &mmv MOVE_UP     &kp PLUS         &kp MINUS        &kp ASTRK        &kp SLASH  &kp F10      &trans
-&trans  &none       &none   &trans  &trans  &trans    &mmv MOVE_DOWN   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp F12    &kp UNDER    &kp PLUS
-&trans  &none       &none   &trans  &trans  &trans    &mmv MOVE_LEFT   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans     &kp LBRC     &kp RBRC
-&trans  &sys_reset  &trans  &none   &trans  &trans    &mmv MOVE_RIGHT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &soft_off  &bootloader  &kp EQUAL
-&trans  &trans      &trans  &trans  &trans  &trans    &mkp LCLK        &trans           &trans           &kp KP_NUMBER_0  &kp DOT    &trans
+&to 0   &to 1           &to 2              &to 3       &none   &none     &mmv MOVE_UP     &kp PLUS         &kp MINUS        &kp ASTRK        &kp SLASH  &trans  &trans
+&trans  &none           &kp C_VOL_UP       &trans      &trans  &trans    &mmv MOVE_DOWN   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &trans  &trans
+&trans  &kp K_PREVIOUS  &kp C_MUTE         &kp K_NEXT  &trans  &trans    &mmv MOVE_LEFT   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans     &trans  &trans
+&trans  &sys_reset      &kp C_VOLUME_DOWN  &none       &trans  &trans    &mmv MOVE_RIGHT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans     &trans  &trans
+&trans  &trans          &trans             &trans      &trans  &trans    &mkp LCLK        &trans           &trans           &kp KP_NUMBER_0  &kp DOT    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
-        kbcontrol {
+        layer3 {
             bindings = <
 &trans  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4       &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &bt BT_CLR_ALL    &bt BT_CLR
 &trans  &bt BT_DISC 0    &bt BT_DISC 1   &bt BT_DISC 2      &bt BT_DISC 3    &bt BT_DISC 4      &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
