@@ -83,6 +83,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            label = "layer1";
         };
 
         layer2 {
@@ -95,6 +96,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "layer2";
         };
 
         layer3 {
@@ -106,7 +108,7 @@
 &trans  &trans           &trans          &trans             &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-            display-name = "layer1";
+            display-name = "layer3";
             sensor-bindings = <&scroll_encoder>;
         };
     };
