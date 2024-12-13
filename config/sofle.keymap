@@ -60,6 +60,70 @@
     keymap {
         compatible = "zmk,keymap";
 
+        layer0 {
+            bindings = <
+&kp ESC         &kp N1                  &kp N2           &kp N3           &kp N4                     &kp N5         &mmv MOVE_UP     &kp N6       &kp N7                     &kp N8           &kp N9                &kp N0      &kp BSPC
+&kp TAB         &kp Q                   &kp W            &kp E            &kp R                      &kp T          &mmv MOVE_DOWN   &kp Y        &kp U                      &kp I            &kp O                 &kp P       &kp BSLH
+&kp CAPS        &kp A                   &kp S            &kp D            &kp F                      &kp G          &mmv MOVE_LEFT   &kp H        &kp J                      &kp K            &kp L                 &kp SEMI    &kp APOS
+&kp LEFT_ALT    &kp Z                   &kp X            &kp C            &kp V                      &kp B          &mmv MOVE_RIGHT  &kp N        &kp M                      &kp COMMA        &kp DOT               &kp FSLH    &kp ENTER
+&kp SCROLLLOCK  &mt LEFT_GUI LG(LS(S))  &mt LCTRL SPACE  &mt RSHFT SPACE  &mt LS(INSERT) LC(INSERT)  &lt 1 ENTER    &mkp LCLK        &lt 2 ENTER  &mt LS(INSERT) LC(INSERT)  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &kp DELETE
+            >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            label = "base";
+        };
+
+        layer1 {
+            bindings = <
+&kp GRAVE      &mt F11 F1  &mt F12 F2         &kp F3            &kp F4           &kp F5               &trans      &kp F6           &kp F7             &kp F8    &kp F9            &kp F10               &trans
+&kp LS(GRAVE)  &trans      &mt LS(HOME) HOME  &kp LS(UP_ARROW)  &mt LS(END) END  &kp LS(PAGE_UP)      &trans      &kp PG_UP        &mt LS(HOME) HOME  &kp UP    &mt LS(END) END   &kp MINUS             &kp EQUAL
+&trans         &trans      &kp LS(LEFT)       &kp LS(DOWN)      &kp LS(RIGHT)    &kp LS(PAGE_DOWN)    &bt BT_PRV  &kp PAGE_DOWN    &kp LEFT           &kp DOWN  &kp RIGHT         &kp LS(MINUS)         &kp LS(EQUAL)
+&trans         &trans      &trans             &kp LC(INSERT)    &kp LS(INSERT)   &trans               &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)       &kp INS   &kp LS(END)       &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&trans         &trans      &trans             &trans            &trans           &trans               &trans      &trans           &trans             &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+            >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            label = "extend";
+        };
+
+        layer2 {
+            bindings = <
+&to 0   &to 1       &to 2   &to 3   &to 4   &to 5     &bl BL_INC    &kp PLUS         &kp SLASH        &kp ASTRK        &kp MINUS  &trans  &trans
+&trans  &trans      &trans  &trans  &trans  &trans    &bl BL_DEC    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS   &trans  &trans
+&trans  &trans      &trans  &trans  &trans  &trans    &bl BL_ON     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &trans  &trans
+&trans  &sys_reset  &trans  &trans  &trans  &trans    &bl BL_OFF    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &trans  &trans
+&trans  &trans      &trans  &trans  &trans  &trans    &bl BL_CYCLE  &trans           &trans           &kp KP_NUMBER_0  &kp DOT    &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+            label = "caseNum";
+        };
+
+        apple {
+            bindings = <
+&kp ESC    &kp N1                  &kp N2          &kp N3          &kp N4  &kp N5    &gresc  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
+&kp TAB    &kp Q                   &kp W           &kp E           &kp R   &kp T     &trans  &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSLH
+&kp CAPS   &kp A                   &kp S           &kp D           &kp F   &kp G     &trans  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z                   &kp X           &kp C           &kp V   &kp B     &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+&trans     &mt LEFT_CONTROL SPACE  &mt LALT SPACE  &mt LGUI SPACE  &trans  &trans    &trans  &trans  &trans  &trans     &trans   &trans
+            >;
+
+            label = "apple";
+        };
+
+        layer4 {
+            bindings = <
+&trans  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4       &rgb_ug RGB_SAI  &kp F6           &kp F7           &kp F8  &kp F9  &trans            &trans
+&trans  &bt BT_DISC 0    &bt BT_DISC 1   &bt BT_DISC 2      &bt BT_DISC 3    &bt BT_DISC 4      &rgb_ug RGB_SAD  &trans           &trans           &trans  &trans  &trans            &trans
+&trans  &out OUT_BLE     &out OUT_USB    &ext_power EP_TOG  &bl BL_TOG       &soft_off          &rgb_ug RGB_HUI  &trans           &trans           &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans  &trans  &trans            &trans
+&trans  &trans           &trans          &trans             &trans           &trans             &trans           &trans           &trans           &trans  &trans  &trans
+            >;
+
+            display-name = "control";
+            sensor-bindings = <&scroll_encoder>;
+        };
+
         normal {
             bindings = <
 &mt GRAVE ESC       &mt LS(N1) NUMBER_1           &mt LS(N2) NUMBER_2     &mt LS(N3) N3         &mt LS(N4) N4             &mt LS(N5) N5    &kp LC(F)    &mt LS(N6) N6  &mt LS(N7) N7         &mt LS(N8) N8            &mt LS(N9) N9           &mt LS(N0) N0           &kp BACKSPACE
@@ -70,56 +134,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
-            display-name = "base";
-        };
-
-        layer1 {
-            bindings = <
-&trans              &mt F11 F1  &mt F12 F2         &kp F3        &kp F4           &kp F5           &mmv MOVE_UP     &kp F6           &kp F7             &kp F8    &kp F9            &kp F10               &trans
-&trans              &trans      &mt LS(HOME) HOME  &kp UP_ARROW  &mt LS(END) END  &kp PAGE_UP      &mmv MOVE_DOWN   &kp PG_UP        &mt LS(HOME) HOME  &kp UP    &mt LS(END) END   &kp MINUS             &kp EQUAL
-&trans              &trans      &kp LEFT           &kp DOWN      &kp RIGHT        &kp PAGE_DOWN    &mmv MOVE_LEFT   &kp PAGE_DOWN    &kp LEFT           &kp DOWN  &kp RIGHT         &kp LS(MINUS)         &kp LS(EQUAL)
-&trans              &trans      &trans             &trans        &trans           &trans           &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)       &kp INS   &kp LS(END)       &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
-&kp LOCKING_SCROLL  &trans      &trans             &trans        &trans           &trans           &mkp LCLK        &trans           &trans             &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-            >;
-
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
-            label = "extend";
-        };
-
-        layer2 {
-            bindings = <
-&to 0   &to 1       &to 2   &to 4   &trans  &trans    &mmv MOVE_UP     &kp PLUS         &kp SLASH        &kp ASTRK        &kp MINUS  &trans  &trans
-&trans  &trans      &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS   &trans  &trans
-&trans  &trans      &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &trans  &trans
-&trans  &sys_reset  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &trans  &trans
-&trans  &trans      &trans  &trans  &trans  &trans    &mkp LCLK        &trans           &trans           &kp KP_NUMBER_0  &kp DOT    &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-            label = "case";
-        };
-
-        apple {
-            bindings = <
-&kp ESC    &kp N1                  &kp N2          &kp N3          &kp N4  &kp N5    &kp UP     &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
-&kp TAB    &kp Q                   &kp W           &kp E           &kp R   &kp T     &kp DOWN   &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSLH
-&kp CAPS   &kp A                   &kp S           &kp D           &kp F   &kp G     &kp LEFT   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z                   &kp X           &kp C           &kp V   &kp B     &kp RIGHT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-&trans     &mt LEFT_CONTROL SPACE  &mt LALT SPACE  &mt LGUI SPACE  &trans  &trans    &trans     &trans  &trans  &trans     &trans   &trans
-            >;
-        };
-
-        layer4 {
-            bindings = <
-&trans  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4       &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &bt BT_CLR_ALL    &bt BT_CLR
-&trans  &bt BT_DISC 0    &bt BT_DISC 1   &bt BT_DISC 2      &bt BT_DISC 3    &bt BT_DISC 4      &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans  &out OUT_BLE     &out OUT_USB    &ext_power EP_TOG  &bl BL_TOG       &soft_off          &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&trans  &trans           &trans          &trans             &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
-            >;
-
-            display-name = "control";
-            sensor-bindings = <&scroll_encoder>;
+            display-name = "tobedeleted";
         };
     };
 };
