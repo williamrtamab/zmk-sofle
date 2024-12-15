@@ -57,19 +57,28 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        altctldel {
+            bindings = <&none>;
+            key-positions = <26 63 54>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer0 {
             bindings = <
-&kp ESC         &kp N1                  &kp N2           &kp N3           &kp N4                     &kp N5         &mmv MOVE_UP     &kp N6       &kp N7                     &kp N8           &kp N9                &kp N0      &kp BSPC
-&kp TAB         &kp Q                   &kp W            &kp E            &kp R                      &kp T          &mmv MOVE_DOWN   &kp Y        &kp U                      &kp I            &kp O                 &kp P       &kp BSLH
-&kp CAPS        &kp A                   &kp S            &kp D            &kp F                      &kp G          &mmv MOVE_LEFT   &kp H        &kp J                      &kp K            &kp L                 &kp SEMI    &kp APOS
-&kp LEFT_ALT    &kp Z                   &kp X            &kp C            &kp V                      &kp B          &mmv MOVE_RIGHT  &kp N        &kp M                      &kp COMMA        &kp DOT               &kp FSLH    &kp ENTER
-&kp SCROLLLOCK  &mt LEFT_GUI LG(LS(S))  &mt LCTRL SPACE  &mt RSHFT SPACE  &mt LS(INSERT) LC(INSERT)  &lt 1 ENTER    &mkp LCLK        &lt 2 ENTER  &mt LS(INSERT) LC(INSERT)  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &kp DELETE
+&kp ESC         &kp N1        &kp N2           &kp N3           &kp N4            &kp N5           &sl 1      &kp N6            &kp N7            &kp N8           &kp N9               &kp N0      &kp BSPC
+&kp TAB         &kp Q         &kp W            &kp E            &kp R             &kp T            &sl 3      &kp Y             &kp U             &kp I            &kp O                &kp P       &kp BSLH
+&kp CAPS        &kp A         &kp S            &kp D            &kp F             &kp G            &sl 0      &kp H             &kp J             &kp K            &kp L                &kp SEMI    &kp APOS
+&kp RIGHT_ALT   &kp Z         &kp X            &kp C            &kp V             &kp B            &sl 2      &kp N             &kp M             &kp COMMA        &kp DOT              &kp FSLH    &kp ENTER
+&kp SCROLLLOCK  &kp LEFT_GUI  &mt LCTRL SPACE  &mt RSHFT SPACE  &mt LSHIFT SPACE  &lt 1 LC(INS)    &mkp LCLK  &lt 2 LS(INSERT)  &mt RSHIFT SPACE  &mt RSHFT SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
             label = "base";
         };
 
@@ -78,7 +87,7 @@
 &kp GRAVE      &mt F11 F1  &mt F12 F2         &kp F3            &kp F4           &kp F5               &trans      &kp F6           &kp F7             &kp F8    &kp F9            &kp F10               &trans
 &kp LS(GRAVE)  &trans      &mt LS(HOME) HOME  &kp LS(UP_ARROW)  &mt LS(END) END  &kp LS(PAGE_UP)      &trans      &kp PG_UP        &mt LS(HOME) HOME  &kp UP    &mt LS(END) END   &kp MINUS             &kp EQUAL
 &trans         &trans      &kp LS(LEFT)       &kp LS(DOWN)      &kp LS(RIGHT)    &kp LS(PAGE_DOWN)    &bt BT_PRV  &kp PAGE_DOWN    &kp LEFT           &kp DOWN  &kp RIGHT         &kp LS(MINUS)         &kp LS(EQUAL)
-&trans         &trans      &trans             &kp LC(INSERT)    &kp LS(INSERT)   &trans               &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)       &kp INS   &kp LS(END)       &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&trans         &kp LC(Z)   &kp LC(X)          &kp LC(INSERT)    &kp LS(INSERT)   &trans               &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)       &kp INS   &kp LS(END)       &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
 &trans         &trans      &trans             &trans            &trans           &trans               &trans      &trans           &trans             &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
