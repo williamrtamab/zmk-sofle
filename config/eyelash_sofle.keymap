@@ -3,11 +3,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/rgb.h>
 
 /*
 
@@ -47,16 +43,32 @@
         tap-ms = <30>;
     };
 
+    macros {
+        template: template {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(D) &kp E &kp A &kp R &kp SPACE &kp LS(C) &kp U &kp S &kp T &kp O &kp M &kp E &kp R &kp COMMA &kp RET &kp RET &kp RET &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp EXCL &kp RET &kp LS(B) &kp E &kp S &kp T &kp SPACE &kp LS(R) &kp E &kp G &kp A &kp R &kp D &kp S &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
+            label = "TEMPLATE";
+        };
+
+        goto_case: goto_case {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(R) &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INS) &kp ENTER>;
+            label = "GOTO_CASE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1    &kp N2     &kp N3           &kp N4                &kp N5           &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9         &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q     &kp W      &kp E            &kp R                 &kp T            &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O          &kp P       &kp BSLH
-&kp CAPS    &kp A     &kp S      &kp D            &kp F                 &kp G            &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L          &kp SEMI    &kp APOS
-&kp LALT    &kp Z     &kp X      &kp C            &kp V                 &kp B            &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA  &kp DOT        &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LGUI  &kp LCTRL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &kp ENTER        &lt 2 LC(INS)  &kp SPACE  &kp SPACE  &kp LG(LS(S))  &kp DELETE
+&kp ESC       &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &sl 1      &kp N6         &kp N7     &kp N8     &kp N9         &kp N0      &kp BACKSPACE
+&kp TAB       &kp Q         &kp W             &kp E            &kp R                 &kp T            &sl 3      &kp Y          &kp U      &kp I      &kp O          &kp P       &kp BSLH
+&kp CAPS      &kp A         &kp S             &kp D            &kp F                 &kp G            &sl 0      &kp H          &kp J      &kp K      &kp L          &kp SEMI    &kp APOS
+&kp LEFT_ALT  &kp Z         &kp X             &kp C            &kp V                 &kp B            &sl 2      &kp N          &kp M      &kp COMMA  &kp DOT        &kp FSLH    &kp ENTER
+&kp C_MUTE    &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &kp ENTER  &lt 2 LC(INS)  &kp SPACE  &kp SPACE  &kp LG(LS(S))  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -65,27 +77,32 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5        &trans  &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
+&kp LS(GRAVE)  &trans      &kp HOME    &kp UP       &kp END      &trans        &trans  &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
+&trans         &trans      &kp LEFT    &kp DOWN     &kp RIGHT    &goto_case    &trans  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
+&trans         &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &template     &trans  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&trans         &trans      &trans      &trans       &trans       &trans        &trans  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
-
-            display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp N7            &kp N8    &kp N9     &kp KP_PLUS  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_NXT  &kp N4            &kp N5    &kp N6     &kp KP_PLUS  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_NXT  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans            &trans    &kp N0     &kp PERIOD   &trans
             >;
+        };
 
-            sensor-bindings = <&scroll_encoder>;
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
