@@ -47,14 +47,23 @@
         template: template {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(D) &kp E &kp A &kp R &kp SPACE &kp LS(C) &kp U &kp S &kp T &kp O &kp M &kp E &kp R &kp COMMA &kp RET &kp RET &kp RET &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp EXCL &kp RET &kp LS(B) &kp E &kp S &kp T &kp SPACE &kp LS(R) &kp E &kp G &kp A &kp R &kp D &kp S &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
+            bindings =
+                <&none &kp LS(D) &kp E &kp A &kp R &kp SPACE &kp LS(C) &kp U &kp S &kp T &kp O &kp M &kp E &kp R &kp COMMA &kp RET &kp RET &kp RET &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp EXCL &kp RET &kp LS(B) &kp E &kp S>,
+                <&macro_wait_time 30>,
+                <&kp T &kp SPACE &kp LS(R) &kp E &kp G &kp A &kp R &kp D &kp S &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
+
             label = "TEMPLATE";
         };
 
         goto_case: goto_case {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(R) &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INS) &kp ENTER>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 90>,
+                <&kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INS) &kp ENTER>,
+                <&macro_press>;
+
             label = "GOTO_CASE";
         };
     };
@@ -68,7 +77,7 @@
 &kp TAB       &kp Q         &kp W             &kp E            &kp R                 &kp T            &sl 3      &kp Y          &kp U      &kp I      &kp O          &kp P       &kp BSLH
 &kp CAPS      &kp A         &kp S             &kp D            &kp F                 &kp G            &sl 0      &kp H          &kp J      &kp K      &kp L          &kp SEMI    &kp APOS
 &kp LEFT_ALT  &kp Z         &kp X             &kp C            &kp V                 &kp B            &sl 2      &kp N          &kp M      &kp COMMA  &kp DOT        &kp FSLH    &kp ENTER
-&kp C_MUTE    &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &kp ENTER  &lt 2 LC(INS)  &kp SPACE  &kp SPACE  &kp LG(LS(S))  &kp DELETE
+&kp C_MUTE    &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &kp ENTER  &lt 2 LS(INS)  &kp SPACE  &kp SPACE  &kp LG(LS(S))  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
