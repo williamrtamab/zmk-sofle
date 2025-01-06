@@ -53,6 +53,8 @@
                 <&kp T &kp SPACE &kp LS(R) &kp E &kp G &kp A &kp R &kp D &kp S &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
 
             label = "TEMPLATE";
+            wait-ms = <40>;
+            tap-ms = <50>;
         };
 
         goto_case: goto_case {
