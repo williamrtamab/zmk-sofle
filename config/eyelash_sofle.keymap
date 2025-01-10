@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -107,11 +108,11 @@
 
         layer_3 {
             bindings = <
-&trans           &trans           &trans           &trans           &trans           &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans           &trans           &trans           &trans           &trans           &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFR    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans           &trans           &trans           &trans           &trans           &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&to 0            &to 1            &to 2            &to 3            &trans           &trans             &trans  &trans      &trans  &trans  &trans  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &trans  &trans      &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFR    &trans  &trans      &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF    &trans  &bl BL_TOG  &trans  &trans  &trans  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &trans  &trans      &trans  &trans  &trans  &trans
             >;
         };
     };
