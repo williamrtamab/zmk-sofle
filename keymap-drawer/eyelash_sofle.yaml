@@ -57,12 +57,12 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: Ctl+ INS, h: '1'}
+  - {t: Ctl+INS, h: '1'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: Sft+ INS, h: '2'}
+  - {t: Sft+INS, h: '2'}
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
-  - Gui+Sft+ S
+  - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+S}
   - $$mdi:backspace-reverse-outline$$
   '1':
   - {t: '`', s: '~'}
@@ -78,12 +78,12 @@ layers:
   - F9
   - F10
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Sft+ `, s: Sft+ ~}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
-  - $$mdi:arrow-up-bold$$
-  - END
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Sft+`, s: Sft+~}
+  - Ctl+Q
+  - Ctl+W
+  - Ctl+E
+  - Ctl+R
+  - Ctl+T
   - {t: '$$mdi:transfer$$', type: trans}
   - PgUp
   - HOME
@@ -91,30 +91,30 @@ layers:
   - END
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - '&goto_case'
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - Ctl+A
+  - Ctl+S
+  - Ctl+D
+  - Ctl+F
+  - Ctl+G
   - {t: '$$mdi:transfer$$', type: trans}
   - PgDn
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: Sft+ -, s: Sft+ _}
-  - {t: Sft+ =, s: Sft+ +}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+ Z
-  - Ctl+ X
-  - Ctl+ INS
-  - Sft+ INS
-  - '&template'
+  - {t: Sft+-, s: Sft+_}
+  - {t: Sft+=, s: Sft++}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+INS
+  - Sft+INS
+  - Ctl+B
   - {t: '$$mdi:transfer$$', type: trans}
   - PRINTSCREEN
-  - Sft+ HOME
+  - Sft+HOME
   - INS
-  - Sft+ END
+  - Sft+END
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -127,8 +127,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 'Sft+ [', s: 'Sft+ {'}
-  - {t: 'Sft+ ]', s: 'Sft+ }'}
+  - {t: 'Sft+[', s: 'Sft+{'}
+  - {t: 'Sft+]', s: 'Sft+}'}
   '2':
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -141,7 +141,7 @@ layers:
   - {t: /, s: '?'}
   - '*'
   - {t: '-', s: _}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&template'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -154,7 +154,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - KP PLUS
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&goto_case'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
