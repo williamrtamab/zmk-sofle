@@ -75,11 +75,11 @@
 
         layer0 {
             bindings = <
-&kp ESC       &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &sl 1      &kp N6         &kp N7     &kp N8     &kp N9         &kp N0      &kp BACKSPACE
-&kp TAB       &kp Q         &kp W             &kp E            &kp R                 &kp T            &sl 3      &kp Y          &kp U      &kp I      &kp O          &kp P       &kp BSLH
-&kp CAPS      &kp A         &kp S             &kp D            &kp F                 &kp G            &sl 0      &kp H          &kp J      &kp K      &kp L          &kp SEMI    &kp APOS
-&kp LEFT_ALT  &kp Z         &kp X             &kp C            &kp V                 &kp B            &sl 2      &kp N          &kp M      &kp COMMA  &kp DOT        &kp FSLH    &kp ENTER
-&kp C_MUTE    &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &kp ENTER  &lt 2 LS(INS)  &kp SPACE  &kp SPACE  &kp LG(LS(S))  &kp DELETE
+&kp ESC       &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &sl 1      &kp N6         &kp N7     &kp N8     &kp N9               &kp N0      &kp BACKSPACE
+&kp TAB       &kp Q         &kp W             &kp E            &kp R                 &kp T            &sl 3      &kp Y          &kp U      &kp I      &kp O                &kp P       &kp BSLH
+&kp CAPS      &kp A         &kp S             &kp D            &kp F                 &kp G            &sl 0      &kp H          &kp J      &kp K      &kp L                &kp SEMI    &kp APOS
+&kp LEFT_ALT  &kp Z         &kp X             &kp C            &kp V                 &kp B            &sl 2      &kp N          &kp M      &kp COMMA  &kp DOT              &kp FSLH    &kp ENTER
+&kp C_MUTE    &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &kp ENTER  &lt 2 LS(INS)  &kp SPACE  &kp SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -88,20 +88,20 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5        &trans  &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
-&kp LS(GRAVE)  &trans      &kp HOME    &kp UP       &kp END      &trans        &trans  &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
-&trans         &trans      &kp LEFT    &kp DOWN     &kp RIGHT    &goto_case    &trans  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
-&trans         &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &template     &trans  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&trans         &trans      &trans      &trans       &trans       &trans        &trans  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &trans  &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
+&kp LS(GRAVE)  &kp LC(Q)   &kp LC(W)   &kp LC(E)    &kp LC(R)    &kp LC(T)    &trans  &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
+&kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &trans  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
+&kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &trans  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&trans         &trans      &trans      &trans       &trans       &trans       &trans  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp N7            &kp N8    &kp N9     &kp KP_PLUS  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_NXT  &kp N4            &kp N5    &kp N6     &kp KP_PLUS  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_NXT  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &template   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp N7            &kp N8    &kp N9     &kp KP_PLUS  &goto_case  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_NXT  &kp N4            &kp N5    &kp N6     &kp KP_PLUS  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_NXT  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans            &trans    &kp N0     &kp PERIOD   &trans
             >;
         };
