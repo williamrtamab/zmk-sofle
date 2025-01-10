@@ -50,8 +50,8 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 150>,
-                <&kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INS) &kp ENTER>;
+                <&macro_wait_time 100>,
+                <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INS) &kp ENTER>;
 
             label = "GOTO_CASE";
         };
@@ -61,11 +61,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_wait_time 30>,
-                <&kp LS(D) &kp E &kp A &kp R &kp SPACE &kp LS(C) &kp U &kp S &kp T &kp O &kp M &kp E &kp R &kp COMMA &kp RET &kp RET &kp RET &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp RET &kp LS(B) &kp E &kp S &kp T &kp SPACE &kp LS(R) &kp E &kp G &kp A &kp R &kp D &kp S &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
+                <&kp LS(D) &kp E &kp A &kp R &kp SPACE &kp LS(C) &kp U &kp S &kp T &kp O &kp M &kp E &kp R &kp COMMA &kp RET &kp RET &kp RET &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
 
             label = "TEMPLATE_BLANK";
             wait-ms = <30>;
-            tap-ms = <30>;
+            tap-ms = <50>;
         };
     };
 
