@@ -141,7 +141,7 @@ layers:
   - {t: /, s: '?'}
   - '*'
   - {t: '-', s: _}
-  - '&template_blank'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
