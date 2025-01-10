@@ -56,19 +56,6 @@
 
             label = "GOTO_CASE";
         };
-
-        template_blank: template_blank {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&macro_wait_time 50>,
-                <&kp LS(D) &kp E &kp A &kp R &kp SPACE &kp LS(C) &kp U &kp S &kp T &kp O &kp M &kp E &kp R &kp COMMA &kp RET &kp RET &kp RET &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
-
-            label = "TEMPLATE_BLANK";
-            wait-ms = <30>;
-            tap-ms = <50>;
-        };
     };
 
     keymap {
@@ -99,10 +86,10 @@
 
         layer_2 {
             bindings = <
-&to 0   &to 1   &to 2   &to 3   &trans  &trans    &rgb_ug RGB_EFR  &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &template_blank  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_EFF  &kp N7            &kp N8    &kp N9     &kp KP_PLUS  &goto_case       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_BRD  &kp N4            &kp N5    &kp N6     &kp KP_PLUS  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_BRI  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans           &trans
+&to 0   &to 1   &to 2   &to 3   &trans  &trans    &rgb_ug RGB_EFR  &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_EFF  &kp N7            &kp N8    &kp N9     &kp KP_PLUS  &goto_case  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_BRD  &kp N4            &kp N5    &kp N6     &kp KP_PLUS  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_BRI  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_TOG  &trans            &trans    &kp N0     &kp PERIOD   &trans
             >;
         };
