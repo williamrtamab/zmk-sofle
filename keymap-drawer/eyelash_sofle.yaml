@@ -80,9 +80,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Sft+`, s: Sft+~}
   - Ctl+Q
-  - Ctl+W
-  - Ctl+E
-  - Ctl+R
+  - W
+  - Gui+E
+  - Sft+R
   - Ctl+T
   - {t: '$$mdi:transfer$$', type: trans}
   - PgUp
