@@ -56,6 +56,20 @@
 
             label = "GOTO_CASE";
         };
+
+        psw: psw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp H &kp A &kp N &kp G &kp E &kp I &kp T &kp A &kp G &kp A &kp I &kp N &kp A &kp N &kp D &kp A &kp G &kp A &kp I &kp N &kp N1 &kp AT &kp N2 &kp AT>;
+            label = "PSW";
+        };
+
+        copyandfind: copyandfind {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(INSERT) &kp LC(LG(F)) &kp LC(V)>;
+            label = "COPYANDFIND";
+        };
     };
 
     keymap {
@@ -63,11 +77,11 @@
 
         layer0 {
             bindings = <
-&kp ESC           &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &sl 1      &kp N6         &kp N7     &kp N8     &kp N9               &kp N0      &kp BACKSPACE
-&kp TAB           &kp Q         &kp W             &kp E            &kp R                 &kp T            &sl 3      &kp Y          &kp U      &kp I      &kp O                &kp P       &kp BSLH
-&mt LS(INS) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G            &sl 0      &kp H          &kp J      &kp K      &kp L                &kp SEMI    &kp APOS
-&kp LEFT_ALT      &kp Z         &kp X             &kp C            &kp V                 &kp B            &sl 2      &kp N          &kp M      &kp COMMA  &kp DOT              &kp FSLH    &kp ENTER
-&kp C_MUTE        &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &kp ENTER  &lt 2 LS(INS)  &kp SPACE  &kp SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
+&kp ESC           &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &sl 1      &kp N6         &kp N7       &kp N8     &kp N9               &kp N0      &kp BACKSPACE
+&kp TAB           &kp Q         &kp W             &kp E            &kp R                 &kp T            &sl 4      &kp Y          &kp U        &kp I      &kp O                &kp P       &kp BSLH
+&mt LS(INS) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G            &sl 0      &kp H          &kp J        &kp K      &kp L                &kp SEMI    &kp APOS
+&kp LEFT_ALT      &kp Z         &kp X             &kp C            &kp V                 &kp B            &sl 2      &kp N          &kp M        &kp COMMA  &kp DOT              &kp FSLH    &kp ENTER
+&kp C_MUTE        &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &kp ENTER  &lt 2 LS(INS)  &lt 3 SPACE  &kp SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -77,7 +91,7 @@
         layer_1 {
             bindings = <
 &kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &trans      &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
-&kp LS(GRAVE)  &kp LC(Q)   &kp W       &kp LG(E)    &kp RS(R)    &kp LC(T)    &trans      &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
+&kp LS(GRAVE)  &kp LC(Q)   &kp W       &kp LG(E)    &kp R        &kp LC(T)    &trans      &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
 &kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &bt BT_PRV  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
 &kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
 &trans         &trans      &trans      &trans       &trans       &trans       &bt BT_CLR  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
@@ -86,17 +100,27 @@
 
         layer_2 {
             bindings = <
-&to 0   &to 1   &to 2   &to 3   &trans  &trans    &rgb_ug RGB_EFR  &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_EFF  &kp N7            &kp N8    &kp N9     &kp KP_PLUS  &goto_case  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_BRD  &kp N4            &kp N5    &kp N6     &kp KP_PLUS  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_BRI  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_TOG  &trans            &trans    &kp N0     &kp PERIOD   &trans
+&to 0   &to 1   &to 2   &to 4   &trans        &trans    &rgb_ug RGB_EFR  &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &psw        &trans
+&trans  &trans  &trans  &trans  &trans        &trans    &rgb_ug RGB_EFF  &kp N7            &kp N8    &kp N9     &kp KP_PLUS  &goto_case  &trans
+&trans  &trans  &trans  &trans  &copyandfind  &trans    &rgb_ug RGB_BRD  &kp N4            &kp N5    &kp N6     &kp KP_PLUS  &trans      &trans
+&trans  &trans  &trans  &trans  &trans        &trans    &rgb_ug RGB_BRI  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans      &trans
+&trans  &trans  &trans  &trans  &trans        &trans    &rgb_ug RGB_TOG  &trans            &trans    &kp N0     &kp PERIOD   &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &trans      &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
+&kp LS(GRAVE)  &kp LC(Q)   &kp LC(W)   &kp LG(E)    &kp LC(R)    &kp LC(T)    &trans      &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
+&kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &bt BT_PRV  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
+&kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&trans         &trans      &trans      &trans       &trans       &trans       &bt BT_CLR  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
         };
 
         layer_3 {
             bindings = <
-&to 0            &to 1            &to 2            &to 3            &trans           &trans             &trans  &trans        &trans  &trans  &trans  &trans  &trans
+&to 0            &to 1            &to 2            &to 4            &trans           &trans             &trans  &trans        &trans  &trans  &trans  &trans  &trans
 &sys_reset       &trans           &trans           &trans           &trans           &trans             &trans  &sys_reset    &trans  &trans  &trans  &trans  &trans
 &rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFR    &trans  &bl BL_CYCLE  &trans  &trans  &trans  &trans  &trans
 &rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF    &trans  &bl BL_TOG    &trans  &trans  &trans  &trans  &trans
