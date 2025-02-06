@@ -60,7 +60,7 @@ layers:
   - {t: Ctl+INS, h: '1'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Sft+INS, h: '2'}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '4'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+S}
   - $$mdi:backspace-reverse-outline$$
@@ -82,7 +82,7 @@ layers:
   - Ctl+Q
   - W
   - Gui+E
-  - Sft+R
+  - R
   - Ctl+T
   - {t: '$$mdi:transfer$$', type: trans}
   - PgUp
@@ -141,7 +141,7 @@ layers:
   - {t: /, s: '?'}
   - '*'
   - {t: '-', s: _}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&psw'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -160,7 +160,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&copyandfind'
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB BRD
   - {t: '4', s: $}
@@ -194,6 +194,71 @@ layers:
   - {t: '0', s: )}
   - .
   - {t: '$$mdi:transfer$$', type: trans}
+  '4':
+  - {t: '`', s: '~'}
+  - {t: F1, h: F11}
+  - {t: F2, h: F12}
+  - F3
+  - F4
+  - F5
+  - {t: '$$mdi:transfer$$', type: trans}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Sft+`, s: Sft+~}
+  - Ctl+Q
+  - Ctl+W
+  - Gui+E
+  - Ctl+R
+  - Ctl+T
+  - {t: '$$mdi:transfer$$', type: trans}
+  - PgUp
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - Ctl+A
+  - Ctl+S
+  - Ctl+D
+  - Ctl+F
+  - Ctl+G
+  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - PgDn
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: Sft+-, s: Sft+_}
+  - {t: Sft+=, s: Sft++}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+INS
+  - Sft+INS
+  - Ctl+B
+  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - PRINTSCREEN
+  - Sft+HOME
+  - INS
+  - Sft+END
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Sft+[', s: 'Sft+{'}
+  - {t: 'Sft+]', s: 'Sft+}'}
   '3':
   - {t: LAYER0, h: toggle}
   - {t: '1', h: toggle}
