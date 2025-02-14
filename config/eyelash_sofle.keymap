@@ -85,7 +85,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "LAYER0";
+            display-name = "0";
         };
 
         layer_1 {
@@ -96,6 +96,8 @@
 &kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
 &trans         &trans      &trans      &trans       &trans       &trans       &bt BT_CLR  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
+
+            label = "1 F n Dir ";
         };
 
         layer_2 {
@@ -106,9 +108,11 @@
 &trans  &trans  &trans  &trans  &trans        &trans    &rgb_ug RGB_BRI  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans      &trans
 &trans  &trans  &trans  &trans  &trans        &trans    &rgb_ug RGB_TOG  &trans            &trans    &kp N0     &kp PERIOD   &trans
             >;
+
+            label = "2 digit psw";
         };
 
-        layer_4 {
+        layer_3 {
             bindings = <
 &kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &trans      &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
 &kp LS(GRAVE)  &kp LC(Q)   &kp LC(W)   &kp LG(E)    &kp LC(R)    &kp LC(T)    &trans      &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
@@ -116,9 +120,11 @@
 &kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
 &trans         &trans      &trans      &trans       &trans       &trans       &bt BT_CLR  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
+
+            label = "3 right";
         };
 
-        layer_3 {
+        layer_4 {
             bindings = <
 &to 0            &to 1            &to 2            &to 4            &trans           &trans             &trans  &trans        &trans  &trans  &trans  &trans  &trans
 &sys_reset       &trans           &trans           &trans           &trans           &trans             &trans  &sys_reset    &trans  &trans  &trans  &trans  &trans
@@ -126,6 +132,8 @@
 &rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF    &trans  &bl BL_TOG    &trans  &trans  &trans  &trans  &trans
 &trans           &trans           &trans           &trans           &trans           &trans             &trans  &trans        &trans  &trans  &trans  &trans
             >;
+
+            label = "4ctl";
         };
     };
 };
