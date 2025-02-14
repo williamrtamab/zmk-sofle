@@ -1,12 +1,12 @@
 layers:
-  LAYER0:
+  '0':
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - {t: '1', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '1 F n Dir ', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -19,7 +19,7 @@ layers:
   - E
   - R
   - T
-  - {t: '3', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: 4ctl, h: '$$mdi:gesture-tap-hold$$'}
   - Y
   - U
   - I
@@ -32,7 +32,7 @@ layers:
   - D
   - F
   - G
-  - {t: LAYER0, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '0', h: '$$mdi:gesture-tap-hold$$'}
   - H
   - J
   - K
@@ -45,7 +45,7 @@ layers:
   - C
   - V
   - B
-  - {t: '2', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: 2 digit psw, h: '$$mdi:gesture-tap-hold$$'}
   - N
   - M
   - {t: ',', s: <}
@@ -57,14 +57,14 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: Ctl+INS, h: '1'}
+  - {t: Ctl+INS, h: '1 F n Dir '}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: Sft+INS, h: '2'}
-  - {t: '$$mdi:keyboard-space$$', h: '4'}
+  - {t: Sft+INS, h: 2 digit psw}
+  - {t: '$$mdi:keyboard-space$$', h: 3 right}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+S}
   - $$mdi:backspace-reverse-outline$$
-  '1':
+  '1 F n Dir ':
   - {t: '`', s: '~'}
   - {t: F1, h: F11}
   - {t: F2, h: F12}
@@ -129,11 +129,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Sft+[', s: 'Sft+{'}
   - {t: 'Sft+]', s: 'Sft+}'}
-  '2':
-  - {t: LAYER0, h: toggle}
-  - {t: '1', h: toggle}
-  - {t: '2', h: toggle}
-  - {t: '3', h: toggle}
+  2 digit psw:
+  - {t: '0', h: toggle}
+  - {t: '1 F n Dir ', h: toggle}
+  - {t: 2 digit psw, h: toggle}
+  - {t: 4ctl, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFR
@@ -194,7 +194,7 @@ layers:
   - {t: '0', s: )}
   - .
   - {t: '$$mdi:transfer$$', type: trans}
-  '4':
+  3 right:
   - {t: '`', s: '~'}
   - {t: F1, h: F11}
   - {t: F2, h: F12}
@@ -259,11 +259,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Sft+[', s: 'Sft+{'}
   - {t: 'Sft+]', s: 'Sft+}'}
-  '3':
-  - {t: LAYER0, h: toggle}
-  - {t: '1', h: toggle}
-  - {t: '2', h: toggle}
-  - {t: '3', h: toggle}
+  4ctl:
+  - {t: '0', h: toggle}
+  - {t: '1 F n Dir ', h: toggle}
+  - {t: 2 digit psw, h: toggle}
+  - {t: 4ctl, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
