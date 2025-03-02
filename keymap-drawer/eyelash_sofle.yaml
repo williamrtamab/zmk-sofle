@@ -263,9 +263,9 @@ layers:
   - {t: '0', h: toggle}
   - {t: '1 F n Dir ', h: toggle}
   - {t: 2 digit psw, h: toggle}
+  - {t: 3 right, h: toggle}
   - {t: 4ctl, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
