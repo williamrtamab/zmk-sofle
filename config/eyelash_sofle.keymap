@@ -70,6 +70,13 @@
             bindings = <&kp LC(INSERT) &kp LC(LG(F)) &kp LC(V)>;
             label = "COPYANDFIND";
         };
+
+        psw2: psw2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(A) &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R &kp N1 &kp AT>;
+            label = "PSW2";
+        };
     };
 
     keymap {
@@ -102,7 +109,7 @@
 
         layer_2 {
             bindings = <
-&to 0   &to 1   &to 2   &to 4   &trans        &trans    &rgb_ug RGB_EFR  &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &psw        &trans
+&to 0   &to 1   &to 2   &to 3   &to 4         &to 5     &rgb_ug RGB_EFR  &kp K_CALCULATOR  &kp FSLH  &kp ASTRK  &kp MINUS    &psw        &psw2
 &trans  &trans  &trans  &trans  &trans        &trans    &rgb_ug RGB_EFF  &kp N7            &kp N8    &kp N9     &kp KP_PLUS  &goto_case  &trans
 &trans  &trans  &trans  &trans  &copyandfind  &trans    &rgb_ug RGB_BRD  &kp N4            &kp N5    &kp N6     &kp KP_PLUS  &trans      &trans
 &trans  &trans  &trans  &trans  &trans        &trans    &rgb_ug RGB_BRI  &kp N1            &kp N2    &kp N3     &kp EQUAL    &trans      &trans
@@ -134,6 +141,30 @@
             >;
 
             label = "4ctl";
+        };
+
+        ap0 {
+            display-name = "0";
+            bindings = <
+&kp ESC         &kp N1        &kp N2            &kp N3           &kp N4                &kp N5         &sl 1      &kp N6       &kp N7       &kp N8     &kp N9                          &kp N0      &kp BACKSPACE
+&kp TAB         &kp Q         &kp W             &kp E            &kp R                 &kp T          &sl 4      &kp Y        &kp U        &kp I      &kp O                           &kp P       &kp BSLH
+&mt LG(V) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G          &sl 0      &kp H        &kp J        &kp K      &kp L                           &kp SEMI    &kp APOS
+&kp LEFT_ALT    &kp Z         &kp X             &kp C            &kp V                 &kp B          &sl 2      &kp N        &kp M        &kp COMMA  &kp DOT                         &kp FSLH    &kp ENTER
+&kp C_MUTE      &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 6 LG(C)    &kp ENTER  &lt 2 LG(V)  &lt 3 SPACE  &kp SPACE  &mt LG(LS(LC(NUMBER_4))) SPACE  &kp DELETE
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+
+        ap1 {
+            label = "ap1";
+            bindings = <
+&kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3     &kp F4     &kp F5       &trans      &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
+&kp LS(GRAVE)  &kp Q       &kp W       &kp LG(E)  &kp R      &kp LC(T)    &trans      &kp PAGE_UP      &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)         &kp MINUS              &kp EQUAL
+&kp BSPC       &kp LG(A)   &kp LG(S)   &kp LG(D)  &kp LG(F)  &kp LG(G)    &bt BT_PRV  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
+&kp ENTER      &kp LG(Z)   &kp LG(X)   &kp LG(C)  &kp LG(V)  &kp LG(B)    &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&trans         &trans      &trans      &trans     &trans     &trans       &bt BT_CLR  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+            >;
         };
     };
 };
