@@ -125,7 +125,7 @@
 &kp LS(GRAVE)  &kp LC(Q)   &kp LC(W)   &kp LG(E)    &kp LC(R)    &kp LC(T)    &trans      &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
 &kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &bt BT_PRV  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
 &kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&trans         &trans      &trans      &trans       &trans       &trans       &bt BT_CLR  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&trans         &trans      &trans      &trans       &trans       &trans       &bt BT_CLR  &mo 2            &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
 
             label = "3 right";
@@ -163,7 +163,7 @@
 &kp LS(GRAVE)  &kp Q       &kp W       &kp LG(E)  &kp R      &kp LC(T)    &trans      &kp PAGE_UP      &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)         &kp MINUS              &kp EQUAL
 &kp BSPC       &kp LG(A)   &kp LG(S)   &kp LG(D)  &kp LG(F)  &kp LG(G)    &bt BT_PRV  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
 &kp ENTER      &kp LG(Z)   &kp LG(X)   &kp LG(C)  &kp LG(V)  &kp LG(B)    &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&trans         &trans      &trans      &trans     &trans     &trans       &bt BT_CLR  &trans           &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&trans         &trans      &trans      &trans     &trans     &trans       &bt BT_CLR  &mo 2            &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
         };
     };
