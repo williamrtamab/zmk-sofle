@@ -390,7 +390,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+Ctl+4}
   - $$mdi:backspace-reverse-outline$$
   ap1:
-  - {t: '`', s: '~'}
+  - {t: '0', h: toggle}
   - {t: F1, h: F11}
   - {t: F2, h: F12}
   - F3
