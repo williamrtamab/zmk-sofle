@@ -159,7 +159,7 @@
         ap1 {
             label = "ap1";
             bindings = <
-&kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3     &kp F4     &kp F5       &trans      &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
+&to 0          &mt F11 F1  &mt F12 F2  &kp F3     &kp F4     &kp F5       &trans      &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
 &kp LS(GRAVE)  &kp Q       &kp W       &kp LG(E)  &kp R      &kp LC(T)    &trans      &kp PAGE_UP      &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)         &kp MINUS              &kp EQUAL
 &kp BSPC       &kp LG(A)   &kp LG(S)   &kp LG(D)  &kp LG(F)  &kp LG(G)    &bt BT_PRV  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
 &kp ENTER      &kp LG(Z)   &kp LG(X)   &kp LG(C)  &kp LG(V)  &kp LG(B)    &bt BT_NXT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
