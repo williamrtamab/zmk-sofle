@@ -26,7 +26,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - {t: '$$mdi:apple-keyboard-caps$$', h: V}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: Sft+INS}
   - A
   - S
   - D
@@ -57,12 +57,12 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: C, h: ap1}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: V, h: 2 digit psw}
+  - {t: Ctl+INS, h: '1 F n Dir '}
+  - {t: ap0, h: toggle}
+  - {t: Sft+INS, h: 2 digit psw}
   - {t: '$$mdi:keyboard-space$$', h: 3 right}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+Ctl+4}
+  - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+S}
   - $$mdi:backspace-reverse-outline$$
   '1 F n Dir ':
   - {t: '`', s: '~'}
@@ -135,7 +135,7 @@ layers:
   - {t: 2 digit psw, h: toggle}
   - {t: 3 right, h: toggle}
   - {t: 4ctl, h: toggle}
-  - {t: '0', h: toggle}
+  - {t: ap0, h: toggle}
   - RGB EFR
   - CALCULATOR
   - {t: /, s: '?'}
@@ -195,7 +195,7 @@ layers:
   - .
   - {t: '$$mdi:transfer$$', type: trans}
   3 right:
-  - {t: '`', s: '~'}
+  - {t: '0', h: toggle}
   - {t: F1, h: F11}
   - {t: F2, h: F12}
   - F3
@@ -265,7 +265,7 @@ layers:
   - {t: 2 digit psw, h: toggle}
   - {t: 3 right, h: toggle}
   - {t: 4ctl, h: toggle}
-  - {t: '0', h: toggle}
+  - {t: ap0, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -324,6 +324,71 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  ap0:
+  - $$mdi:keyboard-esc$$
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '1 F n Dir ', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - {t: 4ctl, h: '$$mdi:gesture-tap-hold$$'}
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: \, s: '|'}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: V}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - {t: '0', h: '$$mdi:gesture-tap-hold$$'}
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - .
+  - $$mdi:apple-keyboard-option$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: 2 digit psw, h: '$$mdi:gesture-tap-hold$$'}
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:volume-off$$
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: C, h: ap1}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: V, h: 2 digit psw}
+  - {t: '$$mdi:keyboard-space$$', h: 3 right}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+Ctl+4}
+  - $$mdi:backspace-reverse-outline$$
   ap1:
   - {t: '`', s: '~'}
   - {t: F1, h: F11}
