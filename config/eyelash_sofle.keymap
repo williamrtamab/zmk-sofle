@@ -77,6 +77,17 @@
             bindings = <&none &kp LS(A) &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R &kp N1 &kp AT>;
             label = "PSW2";
         };
+
+        case_movelatest: case_movelatest {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 50>,
+                <&kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>;
+
+            label = "CASE_MOVELATEST";
+        };
     };
 
     keymap {
