@@ -55,6 +55,13 @@
         tap-ms = <30>;
     };
 
+    rotate_up_Down: rotate_up_Down {
+        compatible = "zmk,behavior-sensor-rotate";
+        label = "ROTATE_UP_DOWN";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+    };
+
     macros {
         goto_case: goto_case {
             compatible = "zmk,behavior-macro";
@@ -93,8 +100,8 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 50>,
-                <&kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>;
+                <&macro_wait_time 100>,
+                <&kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>;
 
             label = "CASE_MOVELATEST";
         };
@@ -112,7 +119,7 @@
 &kp C_MUTE        &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &to 5  &lt 2 LS(INS)  &lt 3 SPACE  &kp SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
             >;
 
-            sensor-bindings = <&rotete_var SCRL_LEFT SCRL_RIGHT>;
+            sensor-bindings = <&rotete_var MOVE_X(-10) MOVE_X(10)>;
             display-name = "0";
         };
 
@@ -138,6 +145,7 @@
             >;
 
             label = "2 digit psw";
+            sensor-bindings = <&rotate_up_Down>;
         };
 
         layer_3 {
