@@ -168,7 +168,7 @@ layers:
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
   - KP PLUS
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&case_movelatest'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
