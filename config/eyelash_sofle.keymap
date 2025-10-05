@@ -178,11 +178,11 @@
         ap0 {
             display-name = "ap0";
             bindings = <
-&kp ESC         &kp N1        &kp N2            &kp N3           &kp N4                &kp N5         &msc SCRL_DOWN   &kp N6       &kp N7                &kp N8     &kp N9                          &kp N0      &kp BACKSPACE
-&kp TAB         &kp Q         &kp W             &kp E            &kp R                 &kp T          &msc SCRL_UP     &kp Y        &kp U                 &kp I      &kp O                           &kp P       &kp BSLH
-&mt LG(V) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G          &msc SCRL_RIGHT  &kp H        &kp J                 &kp K      &kp L                           &kp SEMI    &kp APOS
-&kp LEFT_ALT    &kp Z         &kp X             &kp C            &kp V                 &kp B          &msc SCRL_LEFT   &kp N        &kp M                 &kp COMMA  &kp DOT                         &kp FSLH    &kp ENTER
-&trans          &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 6 LG(C)    &tog 6           &lt 7 SPACE  &mt LEFT_SHIFT SPACE  &kp SPACE  &mt LG(LS(LC(NUMBER_4))) SPACE  &kp DELETE
+&kp ESC         &kp N1        &kp N2            &kp N3           &kp N4                &kp N5         &msc SCRL_DOWN   &kp N6       &kp N7       &kp N8     &kp N9                          &kp N0      &kp BACKSPACE
+&kp TAB         &kp Q         &kp W             &kp E            &kp R                 &kp T          &msc SCRL_UP     &kp Y        &kp U        &kp I      &kp O                           &kp P       &kp BSLH
+&mt LG(V) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G          &msc SCRL_RIGHT  &kp H        &kp J        &kp K      &kp L                           &kp SEMI    &kp APOS
+&kp LEFT_ALT    &kp Z         &kp X             &kp C            &kp V                 &kp B          &msc SCRL_LEFT   &kp N        &kp M        &kp COMMA  &kp DOT                         &kp FSLH    &kp ENTER
+&trans          &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 6 LG(C)    &tog 6           &lt 6 SPACE  &lt 6 SPACE  &kp SPACE  &mt LG(LS(LC(NUMBER_4))) SPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -199,7 +199,7 @@
             >;
         };
 
-        leftDir {
+        Layer7 {
             bindings = <
 &to 0   &trans          &trans            &trans                &trans                &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &msc SCRL_UP    &kp HOME          &kp UP                &kp END               &kp PG_UP                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -207,9 +207,11 @@
 &trans  &trans          &kp LS(HOME)      &kp INS               &kp LS(END)           &kp PRINTSCREEN             &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_GUI    &kp LEFT_CONTROL  &mt LEFT_SHIFT SPACE  &mt LEFT_SHIFT SPACE  &mt LEFT_SHIFT LC(SPACE)    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "7LeftDir";
         };
 
-        leftmouse {
+        Layer8 {
             bindings = <
 &to 0   &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP      &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -217,9 +219,11 @@
 &trans  &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_SHIFT  &mkp LCLK        &mkp RCLK         &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "LeftMouse";
         };
 
-        mirrormode {
+        Layer9 {
             bindings = <
 &to 0                    &kp N1        &kp N2            &kp N3                &kp N4                &kp N5    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp TAB                  &kp Q         &kp W             &kp E                 &kp R                 &kp T     &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -227,9 +231,11 @@
 &kp LEFT_ALT             &kp Z         &kp X             &kp C                 &kp V                 &kp B     &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans                   &kp LEFT_GUI  &kp LEFT_CONTROL  &mt LEFT_SHIFT SPACE  &mt LEFT_SHIFT SPACE  &mo 10    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "LeftMirrorMode";
         };
 
-        leftmirror {
+        Layer10 {
             bindings = <
 &to 0     &kp N0    &kp N9   &kp N8     &kp N7          &kp N6                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp BSLH  &kp P     &kp O    &kp I      &kp U           &kp Y                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -237,6 +243,8 @@
 &kp RET   &kp FSLH  &kp DOT  &kp COMMA  &kp M           &kp N                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans    &trans    &trans   &trans     &kp LEFT_SHIFT  &mt LEFT_SHIFT SPACE    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "Mirrored";
         };
     };
 };
