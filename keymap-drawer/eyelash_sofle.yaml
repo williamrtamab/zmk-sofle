@@ -137,7 +137,7 @@ layers:
   - {t: 3 right, h: toggle}
   - {t: 4ctl, h: toggle}
   - {t: ap0, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - CALCULATOR
   - {t: /, s: '?'}
   - '*'
@@ -150,7 +150,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
@@ -163,7 +163,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&copyandfind'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
@@ -176,7 +176,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -189,7 +189,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-left-click-outline$$
   - {type: held}
   - {t: 3 right, h: toggle}
   - {t: '0', s: )}
@@ -202,7 +202,7 @@ layers:
   - F3
   - F4
   - F5
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - F8
@@ -215,7 +215,7 @@ layers:
   - Gui+E
   - Ctl+R
   - Ctl+T
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - PgUp
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -228,7 +228,7 @@ layers:
   - Ctl+D
   - Ctl+F
   - Ctl+G
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - PgDn
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -241,7 +241,7 @@ layers:
   - Ctl+INS
   - Sft+INS
   - Ctl+B
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - PRINTSCREEN
   - Sft+HOME
   - INS
@@ -385,8 +385,8 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: C, h: ap1}
   - $$mdi:mouse-left-click-outline$$
-  - {t: V, h: 2 digit psw}
-  - {t: '$$mdi:keyboard-space$$', h: 3 right}
+  - 2 digit psw
+  - 3 right
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+Ctl+4}
   - $$mdi:backspace-reverse-outline$$
@@ -397,7 +397,7 @@ layers:
   - F3
   - F4
   - F5
-  - SCROLL UP
+  - $$mdi:pan-up$$
   - F6
   - F7
   - F8
@@ -410,7 +410,7 @@ layers:
   - Gui+E
   - R
   - Ctl+T
-  - SCROLL DOWN
+  - $$mdi:pan-down$$
   - PgUp
   - Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
@@ -449,7 +449,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - $$mdi:bluetooth-off$$
+  - $$mdi:mouse-left-click-outline$$
   - 2 digit psw
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
