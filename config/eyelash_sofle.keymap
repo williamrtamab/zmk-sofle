@@ -178,11 +178,11 @@
         ap0 {
             display-name = "ap0";
             bindings = <
-&kp ESC         &kp N1        &kp N2            &kp N3           &kp N4                &kp N5         &mmv MOVE_UP     &kp N6  &kp N7  &kp N8     &kp N9                          &kp N0      &kp BACKSPACE
-&kp TAB         &kp Q         &kp W             &kp E            &kp R                 &kp T          &mmv MOVE_DOWN   &kp Y   &kp U   &kp I      &kp O                           &kp P       &kp BSLH
-&mt LG(V) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G          &mmv MOVE_LEFT   &kp H   &kp J   &kp K      &kp L                           &kp SEMI    &kp APOS
-&kp LEFT_ALT    &kp Z         &kp X             &kp C            &kp V                 &kp B          &mmv MOVE_RIGHT  &kp N   &kp M   &kp COMMA  &kp DOT                         &kp FSLH    &kp ENTER
-&trans          &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 6 LG(C)    &mkp LCLK        &mo 2   &mo 3   &kp SPACE  &mt LG(LS(LC(NUMBER_4))) SPACE  &kp DELETE
+&kp ESC         &kp N1        &kp N2            &kp N3           &kp N4                &kp N5         &msc SCRL_DOWN   &kp N6       &kp N7                &kp N8     &kp N9                          &kp N0      &kp BACKSPACE
+&kp TAB         &kp Q         &kp W             &kp E            &kp R                 &kp T          &msc SCRL_UP     &kp Y        &kp U                 &kp I      &kp O                           &kp P       &kp BSLH
+&mt LG(V) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G          &msc SCRL_RIGHT  &kp H        &kp J                 &kp K      &kp L                           &kp SEMI    &kp APOS
+&kp LEFT_ALT    &kp Z         &kp X             &kp C            &kp V                 &kp B          &msc SCRL_LEFT   &kp N        &kp M                 &kp COMMA  &kp DOT                         &kp FSLH    &kp ENTER
+&trans          &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 6 LG(C)    &tog 6           &lt 7 SPACE  &mt LEFT_SHIFT SPACE  &kp SPACE  &mt LG(LS(LC(NUMBER_4))) SPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -191,21 +191,21 @@
         ap1 {
             label = "ap1";
             bindings = <
-&to 0          &mt F11 F1  &mt F12 F2  &kp F3     &kp F4     &kp F5       &msc SCRL_DOWN  &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
-&kp LS(GRAVE)  &kp Q       &kp W       &kp LG(E)  &kp R      &kp LC(T)    &msc SCRL_UP    &kp PAGE_UP      &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)         &kp MINUS              &kp EQUAL
-&kp BSPC       &kp LG(A)   &kp LG(S)   &kp LG(D)  &kp LG(F)  &kp LG(G)    &msc SCRL_LEFT  &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
-&kp ENTER      &kp LG(Z)   &kp LG(X)   &kp LG(C)  &kp LG(V)  &kp LG(B)    &msc SCRL_LEFT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&to 0          &trans      &trans      &trans     &trans     &trans       &mkp LCLK       &mo 2            &trans        &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&to 0          &mt F11 F1  &mt F12 F2  &kp F3     &kp F4     &kp F5       &mmv MOVE_UP     &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
+&kp LS(GRAVE)  &kp Q       &kp W       &kp LG(E)  &kp R      &kp LC(T)    &mmv MOVE_DOWN   &kp PAGE_UP      &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)         &kp MINUS              &kp EQUAL
+&kp BSPC       &kp LG(A)   &kp LG(S)   &kp LG(D)  &kp LG(F)  &kp LG(G)    &mmv MOVE_LEFT   &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
+&kp ENTER      &kp LG(Z)   &kp LG(X)   &kp LG(C)  &kp LG(V)  &kp LG(B)    &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&to 0          &trans      &trans      &trans     &trans     &trans       &tog 6           &mkp LCLK        &mkp RCLK     &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
         };
 
         leftDir {
             bindings = <
-&to 0   &trans          &trans            &trans                &trans                &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &msc SCRL_UP    &kp HOME          &kp UP                &kp END               &kp PG_UP          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &msc SCRL_DOWN  &kp LEFT          &kp DOWN              &kp RIGHT             &kp PG_DN          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &kp LS(HOME)      &kp INS               &kp LS(END)           &kp PRINTSCREEN    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_GUI    &kp LEFT_CONTROL  &mt LEFT_SHIFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)      &trans  &trans  &trans  &trans  &trans  &trans
+&to 0   &trans          &trans            &trans                &trans                &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &msc SCRL_UP    &kp HOME          &kp UP                &kp END               &kp PG_UP                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &msc SCRL_DOWN  &kp LEFT          &kp DOWN              &kp RIGHT             &kp PG_DN                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &kp LS(HOME)      &kp INS               &kp LS(END)           &kp PRINTSCREEN             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_GUI    &kp LEFT_CONTROL  &mt LEFT_SHIFT SPACE  &mt LEFT_SHIFT SPACE  &mt LEFT_SHIFT LC(SPACE)    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -214,8 +214,8 @@
 &to 0   &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &mkp LCLK        &mkp RCLK         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_SHIFT  &mkp LCLK        &mkp RCLK         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -231,11 +231,11 @@
 
         leftmirror {
             bindings = <
-&to 0     &kp N0    &kp N9   &kp N8     &kp N7  &kp N6    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp BSLH  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp SQT   &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RET   &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &trans    &trans   &trans     &tog 9  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&to 0     &kp N0    &kp N9   &kp N8     &kp N7          &kp N6                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp BSLH  &kp P     &kp O    &kp I      &kp U           &kp Y                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp SQT   &kp SEMI  &kp L    &kp K      &kp J           &kp H                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp RET   &kp FSLH  &kp DOT  &kp COMMA  &kp M           &kp N                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans    &trans   &trans     &kp LEFT_SHIFT  &mt LEFT_SHIFT SPACE    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
