@@ -53,13 +53,13 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: leftDir, h: toggle}
+  - {t: Layer0, h: toggle}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: Ctl+INS, h: '1 F n Dir '}
-  - {t: 3 right, h: toggle}
+  - {t: 2 digit psw, h: toggle}
   - {t: Sft+INS, h: 2 digit psw}
   - {t: '$$mdi:keyboard-space$$', h: 3 right}
   - $$mdi:keyboard-space$$
@@ -124,9 +124,9 @@ layers:
   - {t: leftmouse, h: toggle}
   - {t: leftDir, h: toggle}
   - {type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Sft+[', s: 'Sft+{'}
   - {t: 'Sft+]', s: 'Sft+}'}
@@ -189,9 +189,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-left-click-outline$$
-  - {type: held}
-  - {t: 3 right, h: toggle}
+  - {t: 2 digit psw, h: toggle}
+  - {t: '$$mdi:mouse-left-click-outline$$', type: held}
+  - $$mdi:mouse-right-click-outline$$
   - {t: '0', s: )}
   - .
   - {t: '$$mdi:transfer$$', type: trans}
@@ -255,8 +255,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 3 right, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 3 right, h: toggle, type: held}
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:mouse-right-click-outline$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Sft+[', s: 'Sft+{'}
   - {t: 'Sft+]', s: 'Sft+}'}
@@ -378,7 +378,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
@@ -397,7 +397,7 @@ layers:
   - F3
   - F4
   - F5
-  - $$mdi:pan-up$$
+  - $$mdi:pan-down$$
   - F6
   - F7
   - F8
@@ -410,7 +410,7 @@ layers:
   - Gui+E
   - R
   - Ctl+T
-  - $$mdi:pan-down$$
+  - $$mdi:pan-up$$
   - PgUp
   - Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
@@ -436,14 +436,14 @@ layers:
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
   - {t: V, h: '$$mdi:apple-keyboard-command$$'}
   - Gui+B
-  - $$mdi:pan-right$$
+  - $$mdi:pan-left$$
   - PRINTSCREEN
   - Sft+HOME
   - INS
   - Sft+END
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Layer0, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -509,11 +509,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: leftDir, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: Ctl+INS, h: '1 F n Dir '}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -577,7 +577,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: leftmouse, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -587,6 +587,50 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   mirrormode:
   - {t: Layer0, h: toggle}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: Sft+Ins}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-option$$
+  - Z
+  - X
+  - C
+  - V
+  - B
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -595,54 +639,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: \, s: '|'}
-  - P
-  - O
-  - I
-  - U
-  - Y
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '''', s: '"'}
-  - {t: ;, s: ':'}
-  - L
-  - K
-  - J
-  - H
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: /, s: '?'}
-  - {t: ., s: '>'}
-  - {t: ',', s: <}
-  - M
-  - N
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: mirrormode, h: toggle}
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - leftmirror
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -652,11 +652,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   leftmirror:
   - {t: Layer0, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
+  - {t: '9', s: (}
+  - {t: '8', s: '*'}
+  - {t: '7', s: '&'}
+  - {t: '6', s: ^}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
