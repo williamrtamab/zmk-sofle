@@ -67,12 +67,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_release>,
-                <&macro_wait_time 50>,
-                <&kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INS) &kp ENTER>;
+                <&macro_tap>,
+                <&kt LG(R) &kt SPACE &kp SPACE &kp SPACE &kp SPACE &kt SPACE &kt C &kt A &kt S &kp E &kt UNDER &kt G &kt O &kt T &kt O &kt SPACE &kp LS(INS) &kp ENTER>;
 
             label = "GOTO_CASE";
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         psw: psw {
@@ -101,11 +101,13 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_release>,
+                <&macro_press>,
                 <&macro_wait_time 50>,
                 <&kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>;
 
             label = "CASE_MOVELATEST";
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
     };
 
