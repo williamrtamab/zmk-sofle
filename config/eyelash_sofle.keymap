@@ -68,7 +68,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 80>,
+                <&macro_wait_time 70>,
                 <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>,
                 <&macro_release>;
 
@@ -79,7 +79,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 70>,
+                <&macro_wait_time 60>,
                 <&kp LS(C) &kp H &kp A &kp N &kp G &kp E &kp I &kp T &kp A &kp G &kp A &kp I &kp N &kp A &kp N &kp D &kp A &kp G &kp A &kp I &kp N &kp N1 &kp AT &kp N2 &kp AT>;
 
             label = "PSW";
@@ -96,8 +96,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&none &kp LS(A) &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R &kp N1 &kp AT>,
-                <&macro_wait_time 70>;
+                <&macro_wait_time 60>,
+                <&none &kp LS(A) &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R &kp N1 &kp AT>;
 
             label = "PSW2";
         };
@@ -107,7 +107,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 80>,
+                <&macro_wait_time 70>,
                 <&kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>,
                 <&macro_release>;
 
