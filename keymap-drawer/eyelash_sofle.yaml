@@ -61,7 +61,7 @@ layers:
   - {t: Ctl+INS, h: '1 F n Dir '}
   - {t: 2 digit psw, h: toggle}
   - {t: Sft+INS, h: 2 digit psw}
-  - {t: '$$mdi:keyboard-space$$', h: 3 right}
+  - {t: '$$mdi:keyboard-space$$', h: RightDir}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+S}
   - $$mdi:backspace-reverse-outline$$
@@ -121,8 +121,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: LeftMirrorMode, h: toggle}
-  - {t: LeftMouse, h: toggle}
-  - {t: 7LeftDir, h: toggle}
+  - {t: Left Mouse, h: toggle}
+  - {t: Left Dir, h: toggle}
   - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:mouse-left-click-outline$$
@@ -134,11 +134,11 @@ layers:
   - {t: Layer0, h: toggle}
   - {t: '1 F n Dir ', h: toggle}
   - {t: 2 digit psw, h: toggle}
-  - {t: 3 right, h: toggle}
-  - {t: 4ctl, h: toggle}
-  - {t: ap0, h: toggle}
+  - {t: RightDir, h: toggle}
+  - {t: Control, h: toggle}
+  - {t: AP0, h: toggle}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - CALCULATOR
+  - AL CALC
   - {t: /, s: '?'}
   - '*'
   - {t: '-', s: _}
@@ -195,7 +195,7 @@ layers:
   - {t: '0', s: )}
   - .
   - {t: '$$mdi:transfer$$', type: trans}
-  3 right:
+  RightDir:
   - {t: Layer0, h: toggle}
   - {t: F1, h: F11}
   - {t: F2, h: F12}
@@ -254,19 +254,19 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 3 right, h: toggle}
+  - {t: RightDir, h: toggle}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:mouse-right-click-outline$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Sft+[', s: 'Sft+{'}
   - {t: 'Sft+]', s: 'Sft+}'}
-  4ctl:
+  Control:
   - {t: Layer0, h: toggle}
   - {t: '1 F n Dir ', h: toggle}
   - {t: 2 digit psw, h: toggle}
-  - {t: 3 right, h: toggle}
-  - {t: 4ctl, h: toggle}
-  - {t: ap0, h: toggle}
+  - {t: RightDir, h: toggle}
+  - {t: Control, h: toggle}
+  - {t: AP0, h: toggle}
   - '&bl BL_TOG'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -325,7 +325,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  ap0:
+  AP0:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -383,14 +383,14 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: C, h: ap1}
-  - {t: ap1, h: toggle}
-  - {t: '$$mdi:keyboard-space$$', h: ap1}
-  - {t: '$$mdi:keyboard-space$$', h: ap1}
+  - {t: C, h: AP Dir}
+  - {t: AP Dir, h: toggle}
+  - {t: '$$mdi:keyboard-space$$', h: AP Dir}
+  - {t: '$$mdi:keyboard-space$$', h: AP Dir}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+Ctl+4}
   - $$mdi:backspace-reverse-outline$$
-  ap1:
+  AP Dir:
   - {t: Layer0, h: toggle}
   - {t: F1, h: F11}
   - {t: F2, h: F12}
@@ -449,13 +449,78 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: ap1, h: toggle}
+  - {t: AP Dir, h: toggle}
   - {t: '$$mdi:mouse-left-click-outline$$', type: held alternate}
   - {t: '$$mdi:mouse-right-click-outline$$', type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Sft+[', s: 'Sft+{'}
   - {t: 'Sft+]', s: 'Sft+}'}
-  7LeftDir:
+  AP Num:
+  - {t: Layer0, h: toggle}
+  - {t: '1 F n Dir ', h: toggle}
+  - {t: 2 digit psw, h: toggle}
+  - {t: RightDir, h: toggle}
+  - {t: Control, h: toggle}
+  - {t: AP0, h: toggle}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - AL CALC
+  - {t: /, s: '?'}
+  - '*'
+  - {t: '-', s: _}
+  - '&psw'
+  - '&psw2'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - KP PLUS
+  - '&goto_case'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&copyandfind'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - KP PLUS
+  - '&case_movelatest'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '=', s: +}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 2 digit psw, h: toggle}
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-right-click-outline$$
+  - {t: '0', s: )}
+  - .
+  - {t: '$$mdi:transfer$$', type: trans}
+  Left Dir:
   - {t: Layer0, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -520,7 +585,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  LeftMouse:
+  Left Mouse:
   - {t: Layer0, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
