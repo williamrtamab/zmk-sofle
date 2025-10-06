@@ -68,8 +68,8 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 70>,
-                <&kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>,
+                <&macro_wait_time 80>,
+                <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>,
                 <&macro_release>;
 
             label = "GOTO_CASE";
@@ -107,7 +107,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 70>,
+                <&macro_wait_time 80>,
                 <&kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>,
                 <&macro_release>;
 
