@@ -67,9 +67,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kt LG(R)>,
+                <&kp LG(R)>,
                 <&macro_wait_time 70>,
-                <&kt SPACE &kp SPACE &kp SPACE &kp SPACE &kt SPACE &kt C &kt A &kt S &kp E &kt UNDER &kt G &kt O &kt T &kt O &kt SPACE &kp LS(INS) &kp ENTER>,
+                <&kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>,
                 <&macro_release>;
 
             label = "GOTO_CASE";
