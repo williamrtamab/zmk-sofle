@@ -67,9 +67,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 50>,
                 <&macro_tap>,
-                <&kt LG(R) &kt SPACE &kp SPACE &kp SPACE &kp SPACE &kt SPACE &kt C &kt A &kt S &kp E &kt UNDER &kt G &kt O &kt T &kt O &kt SPACE &kp LS(INS) &kp ENTER>;
+                <&kt LG(R)>,
+                <&macro_wait_time 50>,
+                <&kt SPACE &kp SPACE &kp SPACE &kp SPACE &kt SPACE &kt C &kt A &kt S &kp E &kt UNDER &kt G &kt O &kt T &kt O &kt SPACE &kp LS(INS) &kp ENTER>;
 
             label = "GOTO_CASE";
         };
@@ -99,11 +100,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 60>,
-                <&macro_pause_for_release>,
                 <&kp LG(R)>,
-                <&macro_release>,
-                <&macro_press>,
+                <&macro_wait_time 60>,
                 <&kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>;
 
             label = "CASE_MOVELATEST";
