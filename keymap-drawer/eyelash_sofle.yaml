@@ -156,7 +156,7 @@ layers:
   - {t: '9', s: (}
   - KP PLUS
   - '&goto_case'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&blanktemplate'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
