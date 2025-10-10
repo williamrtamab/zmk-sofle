@@ -68,9 +68,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
+                <&macro_release>,
                 <&macro_wait_time 50>,
-                <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>,
-                <&macro_release>;
+                <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>;
 
             label = "GOTO_CASE";
         };
@@ -106,7 +106,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
                 <&macro_wait_time 50>,
                 <&kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>,
                 <&macro_release>;
@@ -126,7 +125,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap>,
+                <&macro_release>,
                 <&macro_tap_time 40>,
                 <&kp LS(D) &kp E &kp A &kp R &kp SPACE &kp LS(T) &kp E &kp A &kp M &kp COMMA &kp RET &kp RET &kp RET &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp SPACE &kp EXCL &kp RET &kp RET &kp LS(B) &kp E &kp S &kp T &kp SPACE &kp R &kp E &kp G &kp A &kp R &kp D &kp S &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
 
@@ -160,7 +159,7 @@
             >;
 
             label = "1 F n Dir ";
-            sensor-bindings = <&rotete_var SCRL_LEFT SCRL_RIGHT>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         layer_2 {
@@ -173,16 +172,15 @@
             >;
 
             label = "2 digit psw";
-            sensor-bindings = <&rotate_up_Down>;
         };
 
         layer_3 {
             bindings = <
-&to 0          &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &mmv MOVE_UP     &kp ESCAPE       &kp RG(E)     &kp TAB   &run            &kp F3      &kp BACKSPACE
+&to 0          &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &mmv MOVE_UP     &kp ESCAPE       &kp RG(E)     &kp TAB   &blanktemplate  &kp F3      &kp BACKSPACE
 &kp LS(GRAVE)  &kp LC(Q)   &kp LC(W)   &kp LG(E)    &kp LC(R)    &kp LC(T)    &mmv MOVE_DOWN   &kp PAGE_UP      &kp HOME      &kp UP    &kp END         &kp RC(F)   &kp RC(INSERT)
 &kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &mmv MOVE_LEFT   &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT       &kp RC(A)   &kp RS(INSERT)
-&kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)     &kp RC(B)   &kp ENTER
-&trans         &trans      &trans      &trans       &trans       &trans       &tog 3           &mkp LCLK        &mkp RCLK     &trans    &blanktemplate  &kp DELETE
+&kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)     &run        &kp ENTER
+&trans         &trans      &trans      &trans       &trans       &trans       &tog 3           &mkp LCLK        &mkp RCLK     &trans    &kp RC(B)       &kp DELETE
             >;
 
             label = "RightDir";
