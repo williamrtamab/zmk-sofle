@@ -68,7 +68,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 70>,
+                <&macro_wait_time 50>,
                 <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>,
                 <&macro_release>;
 
@@ -79,7 +79,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 60>,
+                <&macro_wait_time 50>,
                 <&kp LS(C) &kp H &kp A &kp N &kp G &kp E &kp I &kp T &kp A &kp G &kp A &kp I &kp N &kp A &kp N &kp D &kp A &kp G &kp A &kp I &kp N &kp N1 &kp AT &kp N2 &kp AT>;
 
             label = "PSW";
@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 60>,
+                <&macro_wait_time 50>,
                 <&none &kp LS(A) &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R &kp N1 &kp AT>;
 
             label = "PSW2";
@@ -107,11 +107,30 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 70>,
+                <&macro_wait_time 50>,
                 <&kp SPACE &kp SPACE &kp SPACE &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INS) &kp ENTER>,
                 <&macro_release>;
 
             label = "CASE_MOVELATEST";
+        };
+
+        run: run {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(R)>, <&macro_release>;
+
+            label = "RUN";
+        };
+
+        blanktemplate: blanktemplate {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&macro_tap_time 40>,
+                <&kp LS(D) &kp E &kp A &kp R &kp SPACE &kp LS(T) &kp E &kp A &kp M &kp COMMA &kp RET &kp RET &kp RET &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp SPACE &kp EXCL &kp RET &kp RET &kp LS(B) &kp E &kp S &kp T &kp SPACE &kp R &kp E &kp G &kp A &kp R &kp D &kp S &kp RET &kp LS(W) &kp I &kp L &kp L &kp I &kp A &kp M &kp SPACE &kp LS(T) &kp A &kp N>;
+
+            label = "BLANKTEMPLATE";
         };
     };
 
@@ -149,8 +168,8 @@
 &to 0   &to 1   &to 2   &to 3   &to 4         &to 5     &mmv MOVE_UP     &kp C_AL_CALC  &kp FSLH   &kp ASTRK  &kp MINUS    &psw              &psw2
 &trans  &trans  &trans  &trans  &trans        &trans    &mmv MOVE_DOWN   &kp N7         &kp N8     &kp N9     &kp KP_PLUS  &goto_case        &trans
 &trans  &trans  &trans  &trans  &copyandfind  &trans    &mmv MOVE_LEFT   &kp N4         &kp N5     &kp N6     &kp KP_PLUS  &case_movelatest  &trans
-&trans  &trans  &trans  &trans  &trans        &trans    &mmv MOVE_RIGHT  &kp N1         &kp N2     &kp N3     &kp EQUAL    &trans            &trans
-&trans  &trans  &trans  &trans  &trans        &trans    &tog 2           &mkp LCLK      &mkp RCLK  &kp N0     &kp PERIOD   &trans
+&trans  &trans  &trans  &trans  &trans        &trans    &mmv MOVE_RIGHT  &kp N1         &kp N2     &kp N3     &kp EQUAL    &run              &trans
+&trans  &trans  &trans  &trans  &trans        &trans    &tog 2           &mkp LCLK      &mkp RCLK  &kp N0     &kp PERIOD   &to 3
             >;
 
             label = "2 digit psw";
@@ -159,11 +178,11 @@
 
         layer_3 {
             bindings = <
-&to 0          &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &mmv MOVE_UP     &mkp LCLK        &mkp RCLK     &kp F8    &kp F9                &kp F10                &trans
-&kp LS(GRAVE)  &kp LC(Q)   &kp LC(W)   &kp LG(E)    &kp LC(R)    &kp LC(T)    &mmv MOVE_DOWN   &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
-&kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &mmv MOVE_LEFT   &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
-&kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&trans         &trans      &trans      &trans       &trans       &trans       &tog 3           &mkp LCLK        &mkp RCLK     &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&to 0          &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &mmv MOVE_UP     &kp ESCAPE       &kp RG(E)     &kp TAB   &run            &kp F3      &kp BACKSPACE
+&kp LS(GRAVE)  &kp LC(Q)   &kp LC(W)   &kp LG(E)    &kp LC(R)    &kp LC(T)    &mmv MOVE_DOWN   &kp PAGE_UP      &kp HOME      &kp UP    &kp END         &kp RC(F)   &kp RC(INSERT)
+&kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &mmv MOVE_LEFT   &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT       &kp RC(A)   &kp RS(INSERT)
+&kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)     &kp RC(B)   &kp ENTER
+&trans         &trans      &trans      &trans       &trans       &trans       &tog 3           &mkp LCLK        &mkp RCLK     &trans    &blanktemplate  &kp DELETE
             >;
 
             label = "RightDir";
@@ -236,7 +255,7 @@
 &trans  &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_SHIFT  &mkp LCLK        &mkp RCLK         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_SHIFT  &mkp RCLK        &mkp LCLK         &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Left Mouse";
