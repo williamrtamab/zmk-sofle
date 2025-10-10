@@ -156,19 +156,19 @@ layers:
   - {t: '9', s: (}
   - KP PLUS
   - '&goto_case'
-  - '&blanktemplate'
+  - '&readtemplate'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&copyandfind'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
   - KP PLUS
-  - '&case_movelatest'
+  - '&movelatest'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -181,7 +181,7 @@ layers:
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: '=', s: +}
-  - '&run'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -206,7 +206,7 @@ layers:
   - $$mdi:keyboard-esc$$
   - Gui+E
   - $$mdi:keyboard-tab$$
-  - '&blanktemplate'
+  - '&readtemplate'
   - F3
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: Sft+`, s: Sft+~}
@@ -246,7 +246,7 @@ layers:
   - Sft+HOME
   - INS
   - Sft+END
-  - '&run'
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -257,8 +257,8 @@ layers:
   - {t: RightDir, h: toggle}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:mouse-right-click-outline$$', type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+B
+  - Ctl+Z
+  - Ctl+Y
   - $$mdi:backspace-reverse-outline$$
   Control:
   - {t: Layer0, h: toggle}
