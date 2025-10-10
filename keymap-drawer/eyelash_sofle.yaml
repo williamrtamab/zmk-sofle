@@ -206,7 +206,7 @@ layers:
   - $$mdi:keyboard-esc$$
   - Gui+E
   - $$mdi:keyboard-tab$$
-  - '&run'
+  - '&blanktemplate'
   - F3
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: Sft+`, s: Sft+~}
@@ -246,7 +246,7 @@ layers:
   - Sft+HOME
   - INS
   - Sft+END
-  - Ctl+B
+  - '&run'
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -258,7 +258,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:mouse-right-click-outline$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&blanktemplate'
+  - Ctl+B
   - $$mdi:backspace-reverse-outline$$
   Control:
   - {t: Layer0, h: toggle}
