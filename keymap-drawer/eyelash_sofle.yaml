@@ -119,10 +119,10 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: LeftMirrorMode, h: toggle}
   - {t: Left Mouse, h: toggle}
   - {t: Left Dir, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:mouse-left-click-outline$$
@@ -189,7 +189,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 2 digit psw, h: toggle}
+  - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:mouse-left-click-outline$$', type: held}
   - $$mdi:mouse-right-click-outline$$
   - {t: '0', s: )}
@@ -385,9 +385,9 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: C, h: AP Dir}
   - {t: AP Dir, h: toggle}
+  - {t: Gui+V, h: AP Num}
   - {t: '$$mdi:keyboard-space$$', h: AP Dir}
-  - {t: '$$mdi:keyboard-space$$', h: AP Dir}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+Ctl+4}
   - $$mdi:backspace-reverse-outline$$
   AP Dir:
@@ -412,9 +412,9 @@ layers:
   - Ctl+T
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - PgUp
-  - Alt+$$mdi:arrow-left-bold$$
+  - HOME
   - $$mdi:arrow-up-bold$$
-  - Alt+$$mdi:arrow-right-bold$$
+  - END
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -450,7 +450,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: AP Dir, h: toggle}
-  - {t: '$$mdi:mouse-left-click-outline$$', type: held alternate}
+  - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:mouse-right-click-outline$$', type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Sft+[', s: 'Sft+{'}
@@ -515,7 +515,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 2 digit psw, h: toggle}
-  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:mouse-left-click-outline$$', type: held}
   - $$mdi:mouse-right-click-outline$$
   - {t: '0', s: )}
   - .
