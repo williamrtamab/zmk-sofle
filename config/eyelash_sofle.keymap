@@ -75,7 +75,7 @@
                 <&macro_release>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
-                <&macro_tap_time 30>,
+                <&macro_tap_time 15>,
                 <&none &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>;
 
             label = "GOTO_CASE";
@@ -113,7 +113,7 @@
                 <&macro_release>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
-                <&macro_tap_time 30>,
+                <&macro_tap_time 15>,
                 <&none &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INSERT)>;
 
             label = "MOVELATEST";
@@ -131,7 +131,7 @@
                 <&macro_release>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
-                <&macro_tap_time 30>,
+                <&macro_tap_time 20>,
                 <&none &kp R &kp SPACE &kp N3 &kp ENTER>,
                 <&macro_wait_time 300>,
                 <&none &none &none &kp RS(INSERT)>;
@@ -145,11 +145,11 @@
 
         Layer0 {
             bindings = <
-&kp ESC           &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &msc SCRL_UP     &kp N6         &kp N7       &kp N8     &kp N9               &kp N0      &kp BACKSPACE
-&kp TAB           &kp Q         &kp W             &kp E            &kp R                 &kp T            &msc SCRL_DOWN   &kp Y          &kp U        &kp I      &kp O                &kp P       &kp BSLH
-&mt LS(INS) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G            &msc SCRL_LEFT   &kp H          &kp J        &kp K      &kp L                &kp SEMI    &kp APOS
-&kp LEFT_ALT      &kp Z         &kp X             &kp C            &kp V                 &kp B            &msc SCRL_RIGHT  &kp N          &kp M        &kp COMMA  &kp DOT              &kp FSLH    &kp ENTER
-&to 0             &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &tog 2           &lt 2 LS(INS)  &lt 3 SPACE  &kp SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
+&kp ESC           &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &msc SCRL_UP     &kp N6         &kp N7       &kp N8            &kp N9               &kp N0      &kp BACKSPACE
+&kp TAB           &kp Q         &kp W             &kp E            &kp R                 &kp T            &msc SCRL_DOWN   &kp Y          &kp U        &kp I             &kp O                &kp P       &kp BSLH
+&mt LS(INS) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G            &msc SCRL_LEFT   &kp H          &kp J        &kp K             &kp L                &kp SEMI    &kp APOS
+&kp LEFT_ALT      &kp Z         &kp X             &kp C            &kp V                 &kp B            &msc SCRL_RIGHT  &kp N          &kp M        &kp COMMA         &kp DOT              &kp FSLH    &kp ENTER
+&to 0             &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &tog 2           &lt 2 LS(INS)  &lt 3 SPACE  &mt RSHIFT SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -158,11 +158,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &mmv MOVE_UP     &kp F6           &kp F7        &kp F8    &kp F9                &kp F10                &trans
-&kp LS(GRAVE)  &kp LC(Q)   &kp W       &kp LG(E)    &kp R        &kp LC(T)    &mmv MOVE_DOWN   &kp PAGE_UP      &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
-&kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &mmv MOVE_LEFT   &kp PAGE_DOWN    &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
-&kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&trans         &tog 10     &tog 9      &tog 8       &trans       &trans       &none            &mkp LCLK        &mkp RCLK     &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
+&kp GRAVE      &mt F11 F1  &mt F12 F2  &kp F3       &kp F4       &kp F5       &mmv MOVE_UP     &kp F6         &kp F7        &kp F8    &kp F9                &kp F10                &trans
+&kp LS(GRAVE)  &kp LC(Q)   &kp W       &kp LG(E)    &kp R        &kp LC(T)    &mmv MOVE_DOWN   &kp PAGE_UP    &kp HOME      &kp UP    &kp END               &kp MINUS              &kp EQUAL
+&kp BSPC       &kp LC(A)   &kp LC(S)   &kp LC(D)    &kp LC(F)    &kp LC(G)    &mmv MOVE_LEFT   &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT             &kp LS(MINUS)          &kp LS(EQUAL)
+&kp ENTER      &kp LC(Z)   &kp LC(X)   &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &mmv MOVE_RIGHT  &trans         &kp LS(HOME)  &kp INS   &kp LS(END)           &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&trans         &tog 10     &tog 9      &tog 8       &trans       &trans       &none            &mkp LCLK      &mkp RCLK     &trans    &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)
             >;
 
             label = "1 F n Dir ";
@@ -256,11 +256,11 @@
 
         LeftMouse {
             bindings = <
-&to 0   &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_SHIFT  &mkp RCLK        &mkp LCLK         &trans  &trans  &trans  &trans  &trans  &trans
+&to 0   &trans  &trans          &trans          &trans           &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp K_BACK      &msc SCRL_UP    &kp K_FORWARD    &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_SHIFT  &mkp RCLK        &mkp LCLK    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Left Mouse";
