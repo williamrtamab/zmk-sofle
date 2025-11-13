@@ -193,16 +193,16 @@
             label = "RightDir";
         };
 
-        layer_4 {
+        control_4 {
             bindings = <
-&to 0            &to 1            &to 2            &to 3            &to 4            &to 5              &bl BL_TOG       &trans        &trans      &trans  &trans  &trans  &trans
-&sys_reset       &trans           &trans           &trans           &trans           &trans             &rgb_ug RGB_TOG  &sys_reset    &bt BT_CLR  &trans  &trans  &trans  &trans
-&rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFR    &bt BT_PRV       &bl BL_CYCLE  &bt BT_PRV  &trans  &trans  &trans  &trans
-&rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF    &bt BT_NXT       &bl BL_TOG    &bt BT_NXT  &trans  &trans  &trans  &trans
-&trans           &trans           &trans           &trans           &trans           &trans             &bt BT_CLR       &trans        &trans      &trans  &trans  &trans
+&to 0            &to 1            &to 2            &to 3            &to 4            &to 5              &bl BL_TOG       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
+&sys_reset       &trans           &trans           &trans           &trans           &trans             &rgb_ug RGB_TOG  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans
+&rgb_ug RGB_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFR    &bt BT_PRV       &bl BL_CYCLE   &bt BT_PRV     &trans         &trans         &trans         &trans
+&rgb_ug RGB_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF    &bt BT_NXT       &bl BL_TOG     &bt BT_NXT     &trans         &trans         &trans         &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &bt BT_CLR       &trans         &trans         &trans         &trans         &trans
             >;
 
-            label = "Control";
+            label = "4";
         };
 
         AP0 {
