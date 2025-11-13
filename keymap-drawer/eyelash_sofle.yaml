@@ -135,7 +135,7 @@ layers:
   - {t: '1 F n Dir ', h: toggle}
   - {t: 2 digit psw, h: toggle}
   - {t: RightDir, h: toggle}
-  - {t: Control, h: toggle}
+  - {t: '4', h: toggle}
   - {t: AP0, h: toggle}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - AL CALC
@@ -260,20 +260,20 @@ layers:
   - Ctl+Z
   - Ctl+Y
   - $$mdi:backspace-reverse-outline$$
-  Control:
+  '4':
   - {t: Layer0, h: toggle}
   - {t: '1 F n Dir ', h: toggle}
   - {t: 2 digit psw, h: toggle}
   - {t: RightDir, h: toggle}
-  - {t: Control, h: toggle}
+  - {t: '4', h: toggle}
   - {t: AP0, h: toggle}
   - '&bl BL_TOG'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:bluetooth-off$$
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -281,11 +281,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - {t: BT DISC, h: '3'}
+  - {t: BT DISC, h: '4'}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB ON
   - RGB HUI
@@ -460,7 +460,7 @@ layers:
   - {t: '1 F n Dir ', h: toggle}
   - {t: 2 digit psw, h: toggle}
   - {t: RightDir, h: toggle}
-  - {t: Control, h: toggle}
+  - {t: '4', h: toggle}
   - {t: AP0, h: toggle}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - AL CALC
