@@ -75,6 +75,7 @@
                 <&macro_release>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
+                <&macro_wait_time 20>,
                 <&macro_tap_time 15>,
                 <&none &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>;
 
@@ -113,6 +114,7 @@
                 <&macro_release>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
+                <&macro_wait_time 20>,
                 <&macro_tap_time 15>,
                 <&none &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INSERT)>;
 
@@ -131,10 +133,9 @@
                 <&macro_release>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
+                <&macro_wait_time 30>,
                 <&macro_tap_time 20>,
-                <&none &kp R &kp SPACE &kp N3 &kp ENTER>,
-                <&macro_wait_time 300>,
-                <&none &none &none &kp RS(INSERT)>;
+                <&none &kp R &kp SPACE &kp N3 &kp DELETE &kp ENTER>;
 
             label = "READTEMPLATE";
         };
