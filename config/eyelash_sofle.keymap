@@ -76,8 +76,9 @@
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&macro_wait_time 20>,
+                <&none &none>,
                 <&macro_tap_time 15>,
-                <&none &kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>;
+                <&kp C &kp A &kp S &kp E &kp UNDER &kp G &kp O &kp T &kp O &kp SPACE &kp LS(INSERT) &kp ENTER>;
 
             label = "GOTO_CASE";
         };
@@ -115,8 +116,9 @@
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&macro_wait_time 20>,
+                <&none &none>,
                 <&macro_tap_time 15>,
-                <&none &kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INSERT)>;
+                <&kp C &kp A &kp S &kp E &kp UNDER &kp M &kp O &kp V &kp E &kp L &kp A &kp T &kp E &kp S &kp T &kp DOT &kp B &kp A &kp T &kp SPACE &kp LS(INSERT)>;
 
             label = "MOVELATEST";
         };
@@ -134,8 +136,9 @@
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&macro_wait_time 30>,
+                <&none &none>,
                 <&macro_tap_time 20>,
-                <&none &kp R &kp SPACE &kp N3 &kp DELETE &kp ENTER>;
+                <&kp R &kp SPACE &kp N3 &kp DELETE &kp ENTER>;
 
             label = "READTEMPLATE";
         };
@@ -146,11 +149,11 @@
 
         Layer0 {
             bindings = <
-&kp ESC           &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &msc SCRL_UP     &kp N6         &kp N7       &kp N8            &kp N9               &kp N0      &kp BACKSPACE
-&kp TAB           &kp Q         &kp W             &kp E            &kp R                 &kp T            &msc SCRL_DOWN   &kp Y          &kp U        &kp I             &kp O                &kp P       &kp BSLH
-&mt LS(INS) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G            &msc SCRL_LEFT   &kp H          &kp J        &kp K             &kp L                &kp SEMI    &kp APOS
-&kp LEFT_ALT      &kp Z         &kp X             &kp C            &kp V                 &kp B            &msc SCRL_RIGHT  &kp N          &kp M        &kp COMMA         &kp DOT              &kp FSLH    &kp ENTER
-&to 0             &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &tog 2           &lt 2 LS(INS)  &lt 3 SPACE  &mt RSHIFT SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
+&kp ESC           &kp N1        &kp N2            &kp N3           &kp N4                &kp N5           &msc SCRL_UP     &kp N6         &kp N7       &kp N8     &kp N9               &kp N0      &kp BACKSPACE
+&kp TAB           &kp Q         &kp W             &kp E            &kp R                 &kp T            &msc SCRL_DOWN   &kp Y          &kp U        &kp I      &kp O                &kp P       &kp BSLH
+&mt LS(INS) CAPS  &kp A         &kp S             &kp D            &kp F                 &kp G            &msc SCRL_LEFT   &kp H          &kp J        &kp K      &kp L                &kp SEMI    &kp APOS
+&kp LEFT_ALT      &kp Z         &kp X             &kp C            &kp V                 &kp B            &msc SCRL_RIGHT  &kp N          &kp M        &kp COMMA  &kp DOT              &kp FSLH    &kp ENTER
+&to 0             &kp LEFT_GUI  &kp LEFT_CONTROL  &mt RSHFT SPACE  &mt LEFT_SHIFT SPACE  &lt 1 LC(INS)    &tog 2           &lt 2 LS(INS)  &lt 3 SPACE  &kp SPACE  &mt LG(LS(S)) SPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
