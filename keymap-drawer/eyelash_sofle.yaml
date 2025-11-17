@@ -62,7 +62,7 @@ layers:
   - {t: 2 digit psw, h: toggle}
   - {t: Sft+INS, h: 2 digit psw}
   - {t: '$$mdi:keyboard-space$$', h: RightDir}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+S}
   - $$mdi:backspace-reverse-outline$$
   '1 F n Dir ':
