@@ -387,7 +387,7 @@ layers:
   - {t: AP Dir, h: toggle}
   - {t: Gui+V, h: AP Num}
   - {t: '$$mdi:keyboard-space$$', h: AP Dir}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: Gui+Sft+Ctl+4}
   - $$mdi:backspace-reverse-outline$$
   AP Dir:
