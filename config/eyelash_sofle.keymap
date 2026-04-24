@@ -88,7 +88,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_wait_time 30>,
-                <&kp LS(C) &kp H &kp A &kp N &kp G &kp E &kp I &kp T &kp A &kp G &kp A &kp I &kp N &kp A &kp N &kp D &kp A &kp G &kp A &kp I &kp N &kp N1 &kp AT &kp N2 &kp AT>;
+                <&kp LS(A) &kp G &kp A &kp I &kp N &kp A &kp N &kp D &kp LS(A) &kp G &kp A &kp I &kp N &kp I &kp T &kp G &kp O &kp T &kp C &kp H &kp A &kp N &kp G &kp E &kp D &kp N1 &kp AT>;
 
             label = "PSW";
         };
